@@ -64,5 +64,5 @@ server.get('*', function(req, res){
 });
 server.listen(server.get('port'), function()
 {
-    console.log('listening to port ' + server.get('port') ;)
+    console.log('listening to port ' + server.get('port'));
 });
