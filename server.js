@@ -19,7 +19,6 @@ server.use('/img', express.static('img'));
 
 server.get('/elders' , function(req, res)
 {
-    console.log(allElders)
     res.send(allElders);
 });
 
@@ -28,6 +27,10 @@ server.get('/elders/:room', function(req, res)
     console.log(req.params.room)
     res.send(allElders[req.params.room - 1])
 });
+server.get('/help/:id' , function(req,res)
+{
+    res.sendFile(STT.html);
+})
 
 
 

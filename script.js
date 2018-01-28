@@ -1,4 +1,5 @@
-function updateValues(data)
+var data;
+function updateValues()
 {
   if (data[0].message.length > 0) {
     document.getElementById('red-1').style.visibility = "visible";
@@ -11,11 +12,18 @@ function updateValues(data)
   
 }
 
+
+document.getElementById("message_1").onclick = function()
+{
+  alert(data[0]);
+  $.get("elders/" + data[0] + "/delete")
+}
 setInterval(function()
 {
-  $.get("elders" , function(data)
+  $.get("elders" , function(dat)
   {
-    updateValues(data);
+    data = dat;
+    updateValues();
   });
 }
 , 1000)
