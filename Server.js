@@ -4,6 +4,8 @@ const fs = require('fs');
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 const server = express();
 
+server.set('port' , (process.env.PORT || 8080) )
+
 var elder = function(room, name){
     this.room = room;
     this.name = name;
@@ -60,5 +62,7 @@ server.get('*', function(req, res){
     }
         
 });
-server.listen(8080, '0.0.0.0');
-console.log("Listening to port 8080");
+server.listen(server.get('port'), function()
+{
+    console.log('listening to port ' + server.get('port') ;)
+});
