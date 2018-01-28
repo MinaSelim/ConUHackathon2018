@@ -17,5 +17,14 @@ public class ElderService
 		return elders;
 	}
 	
-	public List<Elder> getElderByRoomNumber()
+	public Elder getElderByRoomNumber(int n)
+	{
+		for(Elder x : elders)
+		{
+			if(x.getRoomNumber() == n)
+				return x;
+		}
+		return null;
+	}
+	
 }
