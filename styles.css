@@ -7,17 +7,44 @@ html, body {
 
 .side__nav {
     position: fixed;
-    width: 260px;
+    width: 280px;
     height: 100%;
-    background: lightblue;
+    background: #fff;
+    box-shadow: 2px 0px 10px #999;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
+
+.side__nav a {
+  text-decoration: none;
+  text-align: right;
+}
+
+.side__nav a h4 {
+  font-family: raleway;
+  font-size: 20px;
+  color: #424242;
+}
+
+.side__nav a h4:hover {
+  color: #F44336;
+  transition: color 0.5s ease-in-out;
+}
+
+.logo {
+  height: 130px;
+  width: auto;
+  margin-top: 50px;
+}
+
 .content {
-    margin-left: 260px;
+    margin-left: 280px;
     height: 900px;
     width: auto;
     position: relative;
-    background: F2F2F2;
-    z-index: 1;
+    background: #F2F2F2;
 
     display: flex;
     flex-direction: column;
@@ -29,19 +56,22 @@ html, body {
   width: 80%;
   display: flex;
   justify-content: space-between;
-  padding-bottom: 20px;
+  padding-bottom: 0px;
   border-bottom: 1px solid #E0E0E0;
-  font-family:raleway;
+  font-family: raleway;
+
 }
 
 .header h1 {
   font-size: 1.6em;
   color: #9E9E9E;
+  font-weight: 300;
 }
 
 .header h2 {
   font-size: 1.8em;
   color: ##616161;
+  font-weight: 400;
 }
 
 .client__row--1 {
@@ -77,6 +107,30 @@ html, body {
   box-shadow: 0px 4px 10px #999;
 }
 
+.red__circle {
+  width: 55px;
+  height: 55px;
+  background: #F31431;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  position: absolute;
+  margin-bottom: 300px;
+  margin-left: 250px;
+  box-shadow: 0 4px 5px #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  visibility: hidden;
+}
+
+.alert__number {
+  z-index: 2;
+  color: white;
+  font-weight: 400;
+  font-size: 1.5em;
+}
+
 .client__image {
   height: 150px;
   width: 150px;
@@ -87,14 +141,15 @@ html, body {
 }
 
 .client__room {
-
+  margin-top: 0;
+  color: #424242;
 }
 
 .buttons__container {
   display: flex;
 }
 
-button {
+.buttons__container a {
   height: 36px;
   width: 90px;
   border-radius: 25px;
@@ -102,9 +157,13 @@ button {
   box-shadow: 0 2px 6px #666;
   margin-left: 8px;
   margin-right: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
 }
 
-button p {
+a p {
   text-transform: uppercase;
   color: #fff;
   font-family: roboto;
